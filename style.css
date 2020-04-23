@@ -1,145 +1,497 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="file:///D:/download/fontawesome-free-5.13.0-web/fontawesome-free-5.13.0-web/css/all.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fredoka+One&family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Candal&family=Luckiest+Guy&family=Qwigley&family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Girassol&family=Satisfy&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html {
+    font-size: 12px;
+    scroll-behavior: smooth;
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2em 0;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    box-shadow: 0 0 10px gray;
+    z-index: 2;
+}
+
+
+/*logo is here */
+.nav .brand{
+    text-align: center;
+    transform: translateY(-50rem);
+    animation: slideDown 3.25s forwards;
+}
+
+
+.nav .brand h1{
+    font-size: 3rem;
+    font-family: 'Fredoka One', cursive;
+}
+
+header span {
+    color: rgb(48, 135, 248);
+}
+
+.nav .brand p {
+    font-size: .9rem;
+    font-family: 'Anton', sans-serif;
+    color: rgb(20, 20, 109);
+    letter-spacing: .2rem;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    margin: 0px 20px;
+    transform: translateX(100rem);
+    animation: slideIn .5s forwards;
+}
+
+header ul li:nth-child(1) {
+    animation-delay: .5s ;
+}
+
+header ul li:nth-child(2) {
+    animation-delay: 1s;
+}
+
+header ul li:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+
+header ul li a{
+    font-size: 1.2rem;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: black;
+}
+
+header ul li a:hover{
+    color: rgb(45, 135, 253);
+}
+
+
+
+@media (max-width: 500px){
+    header{
+        flex-direction: column;
+    }
+    header ul {
+        margin-top: 10px;
+    }
+}
+
+
+
+/* page-1 is here */
+
+/* 
+.page-1 svg {
+    width: 120%;
+    position: absolute;
+    left: 0;
+    bottom: -5rem;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+.page-1 {
+    height: 93vh;
+    width: 100%;
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.315),rgba(0, 0, 0, 0.452)), url(futue.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    margin-top: 80px;
+}
+
+/* @media (max-width: 700px){
+    .page-1 {
+        padding-top: 100px;
+    }
+} */
+
+
+.about {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+.about .welcome {
+    font-size: 3rem;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: .3rem;
+    color: white;
+    
+}
+
+.about .name {
+    color: rgb(48, 135, 248);
+    font-size: 2.4rem;
+    font-family: 'Girassol', cursive;
+    letter-spacing: 2px;
+}
+
+.about .text-about {
+    width: 70%;
+    margin: 10px auto;
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    color: #ffffff;
+}
+
+.about .text-about .end {
+    color: red;
+    font-family: 'Trade Winds', cursive;
+    font-size: 2rem;
+}
+
+
+
+@keyframes slideIn {
+    from{
+
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+
+
+/* page-1 ends here */
+
+/* 
+page-2 is start */
+
+
+.page-2 {
+    height: 100vh;
+    width: 100%;
+    padding: 10rem 0;
+}
+
+.page-2 .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page-2 .container .heading-team{
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: rgb(48, 135, 248);
+    font-family: 'Candal', sans-serif;
+    margin-bottom: 2.4rem;
+}
+
+.page-2 .container .card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* card editing is here */
+.page-2 .container .card-wrapper .card {
+    width: 32rem;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 1em 0;
+    box-shadow: 1rem 1rem 1rem grey;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+
+
+.page-2 .container .card-wrapper .card .main-card-img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.page-2 .container .card-wrapper .card .name{
+    font-size: 2.4rem;
+    font-family: 'Trade Winds', cursive;
+    color: rgb(20, 20, 109);
+}
+
+
+.page-2 .container .card-wrapper .card .profession {
+    font-size: 2rem;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(48, 135, 248);
+}
+
+.page-2 .container .card-wrapper .card .about {
+    font-size: 2.2rem;
+    font-family: 'Qwigley', cursive;
+}
+
+
+.page-2 .container .card-wrapper .card .social {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin-bottom: 1.4rem;
+    font-family: 'Girassol', cursive;
    
+}
+
+.page-2 .container .card-wrapper .card .social i:hover{
+    transform: scale(1.4);
+    transition: 1s;
+}
 
 
 
-    <div class="page-1" id="about">
-        <header class="nav">
+.fa-facebook-square{
+    color: #3b5999;
+    font-size: 2rem;
+}
 
-            <div class="brand">
-                <h1 class="logo">Tech<span>.</span>Co</h1>
-                <p class="sublogo">Future that you wants</p>
-            </div>
-        
-            <div class="navbar">
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#team">Team</a></li>
-                </ul>
-            </div>
-        
-        </header>
+.fa-twitter-square{
+    color: #55acee;
+    font-size: 2rem;
+}
+
+.fa-instagram{
+    color: #e6683c;
+    font-size: 2rem;
+}
+
+.fa-google-plus-square{
+    color: rgb(252, 53, 18);
+    font-size: 2rem;
+}
 
 
-        <div class="about">
-            <h1 class="welcome">Hi! My name is</h1>
-            <h2 class="name">Munib Khalid</h2>
-            <P class="text-about">This is not <span class="end">The End</span>.Actually It's the beginning of new era. </P>
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#fff" fill-opacity="1" d="M0,96L1440,224L1440,320L0,320Z"></path>
-              </svg>
 
-            <!--             
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#fff" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,192C384,171,480,117,576,101.3C672,85,768,107,864,96C960,85,1056,43,1152,42.7C1248,43,1344,85,1392,106.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg> --> -->
 
-        </div>
-    </div>
+
+/* page-3 is here */
+
+
+
+
+
+
+.page-3 {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(54, 54, 54); */
+    height: 100vh;
+    width: 100%;
+    padding: 10rem 0;
+}
+
+.skills {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    padding: 70px 0;
+    box-shadow: 0 5px 10px black;
+    border-radius: 10px;
+}
+
+.skills .heading {
+    font-size: 70px;
+    text-align: center ;
+    color: rgb(20, 20, 109);
+    margin-bottom: 40px;
+    font-family: 'Satisfy', cursive;
     
-
-<!-- page-3 is here -->
-
-    <div class="page-3" id="skills">
-        <div class="skills">
-            <h1 class="heading">Skills</h1> 
-                
-                <li class="skill-level">
-                    <h3>HTML</h3><span class="bar"><span class="html"></span>
-                </li>
-                
-                <li class="skill-level">
-                    <h3>CSS</h3><span class="bar"><span class="css"></span>
-                </li>
-
-                <li class="skill-level">
-                    <h3>JAVASCRIPT</h3><span class="bar"><span class="js"></span>
-                </li>
-
-                <li class="skill-level">
-                    <h3>JQUERY</h3><span class="bar"><span class="jq"></span>
-                </li>
-
-    </div>
+}
 
 
+.skills li {
+    list-style: none;
+    margin: 20px 10px;
+}
 
-<!-- page-2 is here -->
-    
+.skills li h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Girassol', cursive;
+    letter-spacing: 5px;
+}
 
-    <div class="page-2" id="team">
+.skills .bar {
+    background-color: rgba(0, 0, 0, 0.459);
+    display: block;
+    height: 4px;
+    /* border: 1px solid rgb(0, 183, 255); */
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0.5px 8px rgba(170, 19, 19, 0.041);
+}
 
-        <div class="container">
-            
-            <h1 class="heading-team">Our team</h1>
+.skills .bar span {
+    height: 4px;
+    background: rgb(48, 135, 248);
+    float: left;
+    border-radius: 2px;
 
-            <div class="card-wrapper">
+}
 
-                <div class="card">
-                    <img src="city1.jpg" class="main-card-img">
-                    <h1 class="name">Batman</h1>
-                    <h2 class="profession">Full stack developer</h1>
-                    <p class="about">hi! my name is munib. i am a full stack developer. within 2 months i completed my front-end development course and join the company named "the clouds".i've been working there since 10th of july. </p>
-                    <ul class="social">
-                        <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-                        <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
-                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                        <li><a href=""><i class="fab fa-google-plus-square"></i></a></li>
-                    </ul>
-                </div>
+.skills .bar .html {
+    width: 90%;
+    animation: html 2s;
+}
 
-                <div class="card">
-                    <img src="city2.jpg" class="main-card-img">
-                    <h1 class="name">Joker</h1>
-                    <h2 class="profession">Web Designer</h1>
-                    <p class="about">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga dolor vel dicta sequi dolore inventore possimus in tempore maxime eaque repellendus tenetur praesentium sed similique beatae dolorem, facere accusamus accusantium.</p>
-                    <ul class="social">
-                        <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-                        <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
-                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                        <li><a href=""><i class="fab fa-google-plus-square"></i></a></li>
-                    </ul>
-                </div>
 
-                <div class="card">
-                    <img src="city3.jpg" class="main-card-img">
-                    <h1 class="name">Jahil</h1>
-                    <h2 class="profession">AWS developer</h1>
-                    <p class="about">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore corrupti laboriosam temporibus adipisci in ad itaque consequuntur est dolor nesciunt eligendi inventore ex odit facilis non, eveniet explicabo, quam pariatur!</p>
-                    <ul class="social">
-                        <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-                        <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
-                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                        <li><a href=""><i class="fab fa-google-plus-square"></i></a></li>
-                    </ul>
-                </div>
+.skills .bar .css {
+    width : 95%;
+    animation: css 2.4s;
+}
 
-            </div>
+.skills .bar .js {
+    width: 75%;
+    animation: js 2.8s;
+}
 
-        </div>
-        <!-- <footer>
-            <h3>Powered by : Github</h3>
-        </footer>
-     -->
-    </div>
-
-  
+.skills .bar .jq{
+    width: 80%;
+    animation: jq 3s;
+} 
 
 
 
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes css {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 95%;
+    }
+}
+
+@keyframes js {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes jq {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 80%;
+    }
+}
 
 
 
 
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 700px){
+    .page-2 .container .card-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .page-2 .container .card-wrapper .card {
+        margin: 1rem 1rem;
+    }
+}
+
+@media (max-width: 700px){
+    .page-3 .skills {
+        width: 100%;
+        border-radius: 0px;
+    }
+}
