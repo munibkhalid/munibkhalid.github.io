@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fredoka+One&family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Candal&family=Luckiest+Guy&family=Qwigley&family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Girassol&family=Satisfy&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html {
+    font-size: 12px;
+    scroll-behavior: smooth;
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2em 0;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+
+/*logo is here */
+.nav .brand{
+    text-align: center;
+    transform: translateY(-50rem);
+    animation: slideDown 3.25s forwards;
+}
+
+
+.nav .brand h1{
+    font-size: 3rem;
+    font-family: 'Fredoka One', cursive;
+}
+
+header span {
+    color: rgb(48, 135, 248);
+}
+
+.nav .brand p {
+    font-size: .9rem;
+    font-family: 'Anton', sans-serif;
+    color: rgb(20, 20, 109);
+    letter-spacing: .2rem;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    margin: 0px 20px;
+    transform: translateX(100rem);
+    animation: slideIn .5s forwards;
+}
+
+header ul li:nth-child(1) {
+    animation-delay: .5s ;
+}
+
+header ul li:nth-child(2) {
+    animation-delay: 1s;
+}
+
+header ul li:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+
+header ul li a{
+    font-size: 1.2rem;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: black;
+}
+
+header ul li a:hover{
+    color: rgb(45, 135, 253);
+}
+
+
+
+@media (max-width: 500px){
+    header{
+        flex-direction: column;
+    }
+    header ul {
+        margin-top: 10px;
+    }
+}
+
+
+
+.about {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+.about .welcome {
+    font-size: 3rem;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: .3rem;
+    color: white;
+    text-shadow: 2rem 1rem 2rem rgb(48, 135, 248);
+}
+
+.about .name {
+    color: rgb(48, 135, 248);
+    font-size: 2.4rem;
+    font-family: 'Fredoka One', cursive;
+}
+
+.about .text-about {
+    width: 70%;
+    margin: 10px auto;
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    color: #ffffff;
+}
+
+
+
+@keyframes slideIn {
+    from{
+
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+
+.page-1 {
+    height: 93vh;
+    width: 100%;
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.123),rgba(0, 0, 0, 0.452)), url(futue.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    margin-top: -23PX;
+}
+
+/* page-1 ends here */
+
+/* 
+page-2 is start */
+
+
+.page-2 {
+    height: 100vh;
+    width: 100%;
+    padding: 10rem 0;
+}
+
+.page-2 .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page-2 .container .heading-team{
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: rgb(48, 135, 248);
+    font-family: 'Candal', sans-serif;
+    margin-bottom: 2.4rem;
+}
+
+.page-2 .container .card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* card editing is here */
+.page-2 .container .card-wrapper .card {
+    width: 32rem;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 1em 0;
+    box-shadow: 1rem 1rem 1rem grey;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+
+
+.page-2 .container .card-wrapper .card .main-card-img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.page-2 .container .card-wrapper .card .name{
+    font-size: 2.4rem;
+    font-family: 'Trade Winds', cursive;
+    color: rgb(20, 20, 109);
+}
+
+
+.page-2 .container .card-wrapper .card .profession {
+    font-size: 2rem;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(48, 135, 248);
+}
+
+.page-2 .container .card-wrapper .card .about {
+    font-size: 2.2rem;
+    font-family: 'Qwigley', cursive;
+}
+
+
+.page-2 .container .card-wrapper .card .social {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin-bottom: 1.4rem;
+    transform: translateY(10rem);
+    transition: 1s;
+}
+
+.page-2 .container .card-wrapper .card:hover .social{
+    transform: translateY(0);
+}
+
+
+
+.fa-facebook-square{
+    color: #3b5999;
+    font-size: 2rem;
+}
+
+.fa-twitter-square{
+    color: #55acee;
+    font-size: 2rem;
+}
+
+.fa-instagram{
+    color: #e6683c;
+    font-size: 2rem;
+}
+
+.fa-google-plus-square{
+    color: rgb(252, 53, 18);
+    font-size: 2rem;
+}
+
+/* page-3 is here */
+.page-3 {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(54, 54, 54); */
+    height: 100vh;
+    width: 100%;
+    padding: 10rem 0;
+}
+
+.skills {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    padding: 70px 0;
+    box-shadow: 0 5px 10px black;
+    border-radius: 10px;
+}
+
+.skills .heading {
+    font-size: 70px;
+    text-align: center ;
+    color: rgb(20, 20, 109);
+    margin-bottom: 40px;
+    font-family: 'Satisfy', cursive;
+    
+}
+
+
+.skills li {
+    list-style: none;
+    margin: 20px 10px;
+}
+
+.skills li h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Girassol', cursive;
+    letter-spacing: 5px;
+}
+
+.skills .bar {
+    background-color: black;
+    display: block;
+    height: 4px;
+    /* border: 1px solid rgb(0, 183, 255); */
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0.5px 8px rgba(170, 19, 19, 0.041);
+}
+
+.skills .bar span {
+    height: 4px;
+    background: rgb(48, 135, 248);
+    float: left;
+    border-radius: 2px;
+
+}
+
+.skills .bar .html {
+    width: 90%;
+    animation: html 2s;
+}
+
+
+.skills .bar .css {
+    width : 95%;
+    animation: css 2.4s;
+}
+
+.skills .bar .js {
+    width: 75%;
+    animation: js 2.8s;
+}
+
+.skills .bar .jq{
+    width: 80%;
+    animation: jq 3s;
+} 
+
+
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes css {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 95%;
+    }
+}
+
+@keyframes js {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes jq {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 700px){
+    .page-2 .container .card-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .page-2 .container .card-wrapper .card {
+        margin: 1rem 1rem;
+    }
+
+}
+
+@media (max-width: 700px){
+    .page-2 .container .card-wrapper .card .social{
+        transform: translateY(0);
+    }
+}
